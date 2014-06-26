@@ -27,58 +27,55 @@ grunt.initConfig({
   criticalcss: {
     options: {
       // Task-specific options go here.
-    },
-    your_target: {
-      // Target-specific file lists and/or options go here.
-    },
+    }
   },
 });
 ```
 
 ### Options
 
-#### options.separator
+#### options.url
 Type: `String`
-Default value: `',  '`
+Default value: `''`
 
-A string value that is used to do something with whatever.
+REQUIRED: A string for the URL of the site you'd like to run this script
+against
 
-#### options.punctuation
+#### options.width
+Type: `Integer`
+Default value: `1200`
+
+An integer value of the width of the screen in pixels 
+
+#### options.height
+Type: `Integer`
+Default value: `900`
+
+An integer value of the height of the screen in pixels 
+
+#### options.outputfile
 Type: `String`
-Default value: `'.'`
+Default value: `dist/dist.css`
 
-A string value that is used to do something else with whatever else.
+A string value that is the file path for wherever you would like the css
+to be output to
 
 ### Usage Examples
 
-#### Default Options
-In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
-
-```js
-grunt.initConfig({
-  criticalcss: {
-    options: {},
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
-});
-```
-
 #### Custom Options
-In this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`
 
 ```js
 grunt.initConfig({
-  criticalcss: {
-    options: {
-      separator: ': ',
-      punctuation: ' !!!',
-    },
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
+	criticalcss: {
+		custom_options: {
+			options: {
+				url: path.resolve( path.join( __dirname, "test", "fixtures", "test-site.html" ) ),
+				width: 1200,
+				height: 900,
+				outputfile: "tmp/dist.css"
+			}
+		}
+	},
 });
 ```
 
