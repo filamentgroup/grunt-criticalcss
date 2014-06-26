@@ -1,7 +1,7 @@
 {
 	"name": "grunt-criticalcss",
 	"description": "Grunt wrapper for criticalcss",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"homepage": "https://github.com/filamentgroup/grunt-criticalcss",
 	"author": {
 		"name": "Jeffrey Lembeck",
@@ -28,8 +28,10 @@
 	"scripts": {
 		"test": "grunt test"
 	},
+	"dependencies": {
+		"criticalcss": "0.1.3"
+	},
 	"devDependencies": {
-		"criticalcss": "0.1.3",
 		"grunt-contrib-jshint": "~0.6.0",
 		"grunt-contrib-clean": "~0.4.0",
 		"grunt-contrib-nodeunit": "~0.2.0",
