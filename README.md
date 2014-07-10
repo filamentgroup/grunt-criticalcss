@@ -1,6 +1,6 @@
 # grunt-criticalcss
 
-> Grunt wrapper for criticalcss
+> Grunt wrapper for [criticalcss](https://github.com/filamentgroup/criticalcss)
 
 ## Getting Started
 This plugin requires Grunt `~0.4.2`
