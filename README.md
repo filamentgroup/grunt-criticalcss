@@ -60,6 +60,12 @@ Default value: `dist/dist.css`
 A string value that is the file path for wherever you would like the css
 to be output to
 
+#### options.filename
+Type: `String`
+Default value: `all.css`
+
+A string value representing a portion of the path to CSS files you'd like to parse. For example, "/css" would match files that have "/css" in their file path. 
+
 ### Usage Examples
 
 #### Custom Options
@@ -69,10 +75,11 @@ grunt.initConfig({
 	criticalcss: {
 		custom_options: {
 			options: {
-				url: path.resolve( path.join( __dirname, "test", "fixtures", "test-site.html" ) ),
+				url: "localhost:4000,
 				width: 1200,
 				height: 900,
-				outputfile: "tmp/dist.css"
+				outputfile: "dist/critical.css",
+				filename: "all.css"
 			}
 		}
 	},
