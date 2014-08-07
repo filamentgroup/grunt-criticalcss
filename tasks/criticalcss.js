@@ -28,7 +28,7 @@ module.exports = function(grunt) {
 
 		criticalcss.findCritical( options.url, options, function(err, content){
 			if( err ){
-				throw new Error( err );
+				throw new Error( err.message );
 			}
 			grunt.file.write( options.outputfile, content );
 			// Print a success message.
