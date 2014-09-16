@@ -66,6 +66,13 @@ Default value: `all.css`
 
 A string value representing a portion of the path to CSS files you'd like to parse. For example, "/css" would match files that have "/css" in their file path. 
 
+#### options.forceInclude
+Type: `Array`
+Default value: `[]`
+
+An array of selectors that you want to guarantee will make it from the CSS
+file into your CriticalCSS output.
+
 ### Usage Examples
 
 #### Custom Options

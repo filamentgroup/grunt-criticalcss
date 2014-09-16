@@ -32,7 +32,7 @@ module.exports = function(grunt) {
 
 		// Configuration to be run (and then tested).
 		criticalcss: {
-			custom_options: {
+			test: {
 				options: {
 					url: path.resolve( path.join( __dirname, "test", "fixtures", "test-site.html" ) ),
 					width: 1200,
