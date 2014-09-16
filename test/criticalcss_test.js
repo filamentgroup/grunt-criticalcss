@@ -27,12 +27,13 @@ exports.criticalcss = {
     // setup here if necessary
     done();
   },
-  default_options: function(test) {
+  "files match": function(test) {
     test.expect(1);
 
     var actual = grunt.file.read('tmp/dist.css');
     var expected = grunt.file.read('test/expected/default_options');
-    test.equal(actual, expected, 'should describe what the default behavior is.');
+		// Stupid hack, but the produced file doesn't have a new line at the end of it, but the expected file does
+    test.equal(actual + '\n', expected, 'Files should match');
 
     test.done();
   }
