@@ -22,7 +22,8 @@ module.exports = function(grunt) {
 			height: 900,
 			outputfile: "dist/dist.css",
 			filename: "all.css",
-			url: ""
+			url: "",
+			forceInclude: []
 		});
 
 
