@@ -6,11 +6,13 @@
  * Licensed under the MIT license.
  */
 
-'use strict';
+/*global require:true*/
+/*global __dirname:true*/
 
 var path = require( 'path' );
 
 module.exports = function(grunt) {
+	'use strict';
 
 	// Project configuration.
 	grunt.initConfig({
@@ -35,6 +37,7 @@ module.exports = function(grunt) {
 			test: {
 				options: {
 					url: path.resolve( path.join( __dirname, "test", "fixtures", "test-site.html" ) ),
+					filename: path.resolve( path.join( __dirname, "test", "fixtures", "all.css" ) ),
 					width: 1200,
 					height: 900,
 					outputfile: "tmp/dist.css"

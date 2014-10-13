@@ -26,16 +26,26 @@ module.exports = function(grunt) {
 			forceInclude: []
 		});
 
-
-		criticalcss.findCritical( options.url, options, function(err, content){
+		criticalcss.getRules( options.filename, function( err, content ){
 			if( err ){
 				throw new Error( err.message );
 			}
-			grunt.file.write( options.outputfile, content );
-			// Print a success message.
-			grunt.log.writeln('File "' + options.outputfile + '" created.');
-			done();
+
+			options.rules = JSON.parse( content );
+
+			criticalcss.findCritical( options.url, options, function(err, content){
+				if( err ){
+					throw new Error( err.message );
+				}
+				grunt.file.write( options.outputfile, content );
+				// Print a success message.
+				grunt.log.writeln('File "' + options.outputfile + '" created.');
+				done();
+			});
+
 		});
+
+
 	});
 
 };

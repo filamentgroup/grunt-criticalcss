@@ -41,6 +41,13 @@ Default value: `''`
 REQUIRED: A string for the URL of the site you'd like to run this script
 against
 
+#### options.filename
+Type: `String`
+Default value: `all.css`
+
+A string value for the entire path of a css file that you have hosted
+locally.
+
 #### options.width
 Type: `Integer`
 Default value: `1200`
@@ -60,11 +67,6 @@ Default value: `dist/dist.css`
 A string value that is the file path for wherever you would like the css
 to be output to
 
-#### options.filename
-Type: `String`
-Default value: `all.css`
-
-A string value representing a portion of the path to CSS files you'd like to parse. For example, "/css" would match files that have "/css" in their file path. 
 
 #### options.forceInclude
 Type: `Array`
