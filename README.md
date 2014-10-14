@@ -99,4 +99,6 @@ grunt.initConfig({
 In lieu of a formal style guide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
-_(Nothing yet)_
+* v0.3.0 - Moved to using a local filename instead of a pattern-match
+* v0.2.0 - Added `forceInclude` functionality.
+* v0.1.0 - Original release
