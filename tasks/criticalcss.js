@@ -23,7 +23,8 @@ module.exports = function(grunt) {
 			outputfile: "dist/dist.css",
 			filename: "all.css",
 			url: "",
-			forceInclude: []
+			forceInclude: [],
+			buffer: 800*1024
 		});
 
 		criticalcss.getRules( options.filename, function( err, content ){

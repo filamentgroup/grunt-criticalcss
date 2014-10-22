@@ -40,7 +40,8 @@ module.exports = function(grunt) {
 					filename: path.resolve( path.join( __dirname, "test", "fixtures", "all.css" ) ),
 					width: 1200,
 					height: 900,
-					outputfile: "tmp/dist.css"
+					outputfile: "tmp/dist.css",
+					buffer: 800*1024
 				}
 			}
 		},

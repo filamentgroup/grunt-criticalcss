@@ -75,6 +75,13 @@ Default value: `[]`
 An array of selectors that you want to guarantee will make it from the CSS
 file into your CriticalCSS output.
 
+#### options.buffer
+Type: `Integer`
+Default value: `800*1024`
+
+Sets the maxBuffer for child_process.execFile in Node. Necessary for potential memory issues.
+
+
 ### Usage Examples
 
 #### Custom Options
@@ -88,7 +95,8 @@ grunt.initConfig({
 				width: 1200,
 				height: 900,
 				outputfile: "dist/critical.css",
-				filename: "all.css"
+				filename: "all.css",
+				buffer: 800*1024
 			}
 		}
 	},
@@ -99,6 +107,7 @@ grunt.initConfig({
 In lieu of a formal style guide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
+* v0.4.0 - Add support for buffer size, so you don't exceed the buffer
 * v0.3.0 - Moved to using a local filename instead of a pattern-match
 * v0.2.0 - Added `forceInclude` functionality.
 * v0.1.0 - Original release
