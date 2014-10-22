@@ -27,7 +27,7 @@ module.exports = function(grunt) {
 			buffer: 800*1024
 		});
 
-		criticalcss.getRules( options.filename, function( err, content ){
+		criticalcss.getRules( options.filename, { buffer: options.buffer }, function( err, content ){
 			if( err ){
 				throw new Error( err.message );
 			}
