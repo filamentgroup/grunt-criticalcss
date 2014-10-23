@@ -91,7 +91,7 @@ grunt.initConfig({
 	criticalcss: {
 		custom_options: {
 			options: {
-				url: "localhost:4000",
+				url: "http://localhost:4000",
 				width: 1200,
 				height: 900,
 				outputfile: "dist/critical.css",
