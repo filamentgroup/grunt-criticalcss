@@ -89,7 +89,7 @@ Sets the maxBuffer for child_process.execFile in Node. Necessary for potential m
 ```js
 grunt.initConfig({
 	criticalcss: {
-		custom_options: {
+		custom: {
 			options: {
 				url: "http://localhost:4000",
 				width: 1200,
