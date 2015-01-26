@@ -83,6 +83,12 @@ Default value: `800*1024`
 
 Sets the maxBuffer for child_process.execFile in Node. Necessary for potential memory issues.
 
+#### options.ignoreConsole
+Type: `Boolean`
+Default value: `false`
+
+If set to `true`, will silence any outputs to console in the page's JavaScript
+
 
 ### Usage Examples
 
