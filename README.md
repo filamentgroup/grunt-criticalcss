@@ -25,8 +25,10 @@ In your project's Gruntfile, add a section named `criticalcss` to the data objec
 ```js
 grunt.initConfig({
   criticalcss: {
-    options: {
-      // Task-specific options go here.
+    custom: {
+      options: {
+        // Task-specific options go here.
+      }
     }
   },
 });
