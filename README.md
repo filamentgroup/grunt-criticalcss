@@ -99,6 +99,7 @@ grunt.initConfig({
 				outputfile: "dist/critical.css",
 				filename: "/path/to/local/all.css", // Using path.resolve( path.join( ... ) ) is a good idea here
 				buffer: 800*1024
+				ignoreConsole: false
 			}
 		}
 	},
@@ -109,6 +110,7 @@ grunt.initConfig({
 In lieu of a formal style guide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
+* v0.5.0 - Add support for ignoreConsole
 * v0.4.0 - Add support for buffer size, so you don't exceed the buffer
 * v0.3.0 - Moved to using a local filename instead of a pattern-match
 * v0.2.0 - Added `forceInclude` functionality.
