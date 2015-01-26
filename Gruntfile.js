@@ -41,7 +41,8 @@ module.exports = function(grunt) {
 					width: 1200,
 					height: 900,
 					outputfile: "tmp/dist.css",
-					buffer: 800*1024
+					buffer: 800*1024,
+					ignoreConsole: false
 				}
 			}
 		},

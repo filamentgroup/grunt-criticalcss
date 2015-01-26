@@ -24,7 +24,8 @@ module.exports = function(grunt) {
 			filename: "all.css",
 			url: "",
 			forceInclude: [],
-			buffer: 800*1024
+			buffer: 800*1024,
+			ignoreConsole: false
 		});
 
 		criticalcss.getRules( options.filename, { buffer: options.buffer }, function( err, content ){
