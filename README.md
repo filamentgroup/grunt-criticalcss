@@ -104,7 +104,7 @@ grunt.initConfig({
 				height: 900,
 				outputfile: "dist/critical.css",
 				filename: "/path/to/local/all.css", // Using path.resolve( path.join( ... ) ) is a good idea here
-				buffer: 800*1024
+				buffer: 800*1024,
 				ignoreConsole: false
 			}
 		}
