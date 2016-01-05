@@ -24,7 +24,7 @@
     "test": "grunt test"
   },
   "dependencies": {
-    "criticalcss": "0.6.1"
+    "criticalcss": "0.6.2"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
