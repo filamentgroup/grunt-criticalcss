@@ -1,7 +1,7 @@
 {
   "name": "grunt-criticalcss",
   "description": "Grunt wrapper for criticalcss",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "https://github.com/filamentgroup/grunt-criticalcss",
   "author": {
     "name": "Jeffrey Lembeck",
