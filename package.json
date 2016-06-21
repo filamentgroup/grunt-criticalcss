@@ -24,7 +24,7 @@
     "test": "grunt test"
   },
   "dependencies": {
-    "criticalcss": "^1.0.0"
+    "criticalcss": "filamentgroup/criticalCSS#ignore-errors-BAD"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
