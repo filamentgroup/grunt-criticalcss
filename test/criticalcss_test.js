@@ -30,10 +30,10 @@ exports.criticalcss = {
   "files match": function(test) {
     test.expect(1);
 
-    var actual = grunt.file.read('tmp/dist.css');
-    var expected = grunt.file.read('test/expected/default_options');
+    var actual = grunt.file.read('tmp/dist.css').replace(/\s|\n/g, "");
+    var expected = grunt.file.read('test/expected/default_options').replace(/\s|\n/g, "");
 		// Stupid hack, but the produced file doesn't have a new line at the end of it, but the expected file does
-    test.equal(actual + '\n', expected, 'Files should match');
+    test.equal(actual, expected, 'Files should match');
 
     test.done();
   }

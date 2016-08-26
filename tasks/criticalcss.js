@@ -8,6 +8,8 @@
 
 'use strict';
 
+var fs = require('fs');
+
 module.exports = function(grunt) {
 
 	// Please see the Grunt documentation for more information regarding task
@@ -39,6 +41,10 @@ module.exports = function(grunt) {
 				if( err ){
 					throw new Error( err.message );
 				}
+
+				var originalCSS = fs.readFileSync(options.filename).toString();
+				content = criticalcss.restoreOriginalDefs(originalCSS, content);
+
 				grunt.file.write( options.outputfile, content );
 				// Print a success message.
 				grunt.log.writeln('File "' + options.outputfile + '" created.');
