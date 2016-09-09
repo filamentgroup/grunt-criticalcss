@@ -89,6 +89,11 @@ Default value: `false`
 
 If set to `true`, will silence any outputs to console in the page's JavaScript
 
+#### options.restoreFontFaces
+Type: `Boolean`
+Default value: `false`
+
+If set to `true`, all font faces from the `filename` CSS will be included.
 
 ### Usage Examples
 

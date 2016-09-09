@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "foo";
+  src: url("http://example.com/foo.ttf");
+}
+
 h1 {
 	font-size: 2em;
 }
