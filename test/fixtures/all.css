@@ -5,6 +5,7 @@
 
 h1 {
 	font-size: 2em;
+	font-family: foo;
 }
 p {
 	font-size: 1.5em;

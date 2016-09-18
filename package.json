@@ -24,7 +24,7 @@
     "test": "grunt test"
   },
   "dependencies": {
-    "criticalcss": "filamentgroup/criticalCSS#font-faces"
+    "criticalcss": "filamentgroup/criticalCSS#critical-font-faces"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
