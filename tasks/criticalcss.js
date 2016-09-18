@@ -46,6 +46,9 @@ module.exports = function(grunt) {
 				var originalCSS = fs.readFileSync(options.filename).toString();
 				content = criticalcss.restoreOriginalDefs(originalCSS, content);
 
+				// NOTE This should follow the original declarations restoration above
+				// so that if a `font-family` declaration was restored from the original
+				// CSS the corresponding `@font-face` will be included.
 				if( options.restoreFontFaces ){
 					content = criticalcss.restoreFontFaces(originalCSS, content);
 				}
