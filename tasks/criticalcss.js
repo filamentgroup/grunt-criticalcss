@@ -27,7 +27,8 @@ module.exports = function(grunt) {
 			url: "",
 			forceInclude: [],
 			buffer: 800*1024,
-			ignoreConsole: false
+			ignoreConsole: false,
+			restoreFontFaces: false
 		});
 
 		criticalcss.getRules( options.filename, { buffer: options.buffer }, function( err, content ){
@@ -44,6 +45,13 @@ module.exports = function(grunt) {
 
 				var originalCSS = fs.readFileSync(options.filename).toString();
 				content = criticalcss.restoreOriginalDefs(originalCSS, content);
+
+				// NOTE This should follow the original declarations restoration above
+				// so that if a `font-family` declaration was restored from the original
+				// CSS the corresponding `@font-face` will be included.
+				if( options.restoreFontFaces ){
+					content = criticalcss.restoreFontFaces(originalCSS, content);
+				}
 
 				grunt.file.write( options.outputfile, content );
 				// Print a success message.

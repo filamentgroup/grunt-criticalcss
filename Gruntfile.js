@@ -42,7 +42,8 @@ module.exports = function(grunt) {
 					height: 900,
 					outputfile: "tmp/dist.css",
 					buffer: 800*1024,
-					ignoreConsole: false
+					ignoreConsole: false,
+					restoreFontFaces: true
 				}
 			}
 		},
@@ -50,8 +51,7 @@ module.exports = function(grunt) {
 		// Unit tests.
 		nodeunit: {
 			tests: ['test/*_test.js'],
-		},
-
+		}
 	});
 
 	// Actually load this plugin's task(s).

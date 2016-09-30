@@ -1,5 +1,16 @@
+@font-face {
+	font-family: "foo";
+	src: url("http://example.com/foo.ttf");
+}
+
+@font-face {
+	font-family: "bar";
+	src: url("http://example.com/bar.ttf");
+}
+
 h1 {
 	font-size: 2em;
+	font-family: foo;
 }
 p {
 	font-size: 1.5em;

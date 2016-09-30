@@ -89,6 +89,11 @@ Default value: `false`
 
 If set to `true`, will silence any outputs to console in the page's JavaScript
 
+#### options.restoreFontFaces
+Type: `Boolean`
+Default value: `false`
+
+If you include `@font-face` declarations in your `all.css` file and set this flag to `true` in your options, criticalcss will include all the `@font-face` declarations that are required to satisfy `font-family` declarations in the criticalcss output.
 
 ### Usage Examples
 
