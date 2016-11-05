@@ -24,7 +24,7 @@
     "test": "grunt test"
   },
   "dependencies": {
-    "criticalcss": "2.1.0"
+    "criticalcss": "filamentgroup/criticalcss#page-open-retry-hack"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
