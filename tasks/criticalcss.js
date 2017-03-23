@@ -15,7 +15,7 @@ module.exports = function(grunt) {
 	// Please see the Grunt documentation for more information regarding task
 	// creation: http://gruntjs.com/creating-tasks
 	var criticalcss = require( 'criticalcss' );
-	
+
 	grunt.registerMultiTask('criticalcss', 'Grunt wrapper for criticalcss', function() {
 		var done = this.async();
 		// Merge task-specific and/or target-specific options with these defaults.
@@ -28,7 +28,9 @@ module.exports = function(grunt) {
 			forceInclude: [],
 			buffer: 800*1024,
 			ignoreConsole: false,
-			restoreFontFaces: false
+			restoreFontFaces: false,
+			prepend: '',
+			append: ''
 		});
 
 		criticalcss.getRules( options.filename, { buffer: options.buffer }, function( err, content ){
@@ -51,6 +53,14 @@ module.exports = function(grunt) {
 				// CSS the corresponding `@font-face` will be included.
 				if( options.restoreFontFaces ){
 					content = criticalcss.restoreFontFaces(originalCSS, content);
+				}
+
+				if( options.prepend ){
+					content = options.prepend + "\n" + content;
+				}
+
+				if(options.append){
+					content = content + "\n" + options.append;
 				}
 
 				grunt.file.write( options.outputfile, content );
