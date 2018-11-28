@@ -24,7 +24,7 @@
     "test": "grunt test"
   },
   "dependencies": {
-    "criticalcss": "filamentgroup/criticalCSS#venkman"
+    "criticalcss": "filamentgroup/criticalCSS#master"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
