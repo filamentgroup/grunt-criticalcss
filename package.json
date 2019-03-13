@@ -1,7 +1,7 @@
 {
   "name": "grunt-criticalcss",
   "description": "Grunt wrapper for criticalcss",
-  "version": "3.0.0-beta",
+  "version": "3.0.0-beta.1",
   "homepage": "https://github.com/filamentgroup/grunt-criticalcss",
   "author": {
     "name": "Jeffrey Lembeck",
@@ -24,7 +24,7 @@
     "test": "grunt test"
   },
   "dependencies": {
-    "criticalcss": "filamentgroup/criticalCSS#supports"
+    "criticalcss": "3.0.0-beta.1"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
