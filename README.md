@@ -1,3 +1,5 @@
+:warning: This project is archived and the repository is no longer maintained. 
+
 # grunt-criticalcss
 
 > Grunt wrapper for [criticalcss](https://github.com/filamentgroup/criticalcss)
